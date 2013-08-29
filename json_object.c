@@ -45,6 +45,9 @@
 # error You do not have snprintf on your system.
 #endif /* HAVE_SNPRINTF */
 
+#define isnan(x) ((x) != (x))
+#define isinf(x) (!_finite(x))
+
 // Don't define this.  It's not thread-safe.
 /* #define REFCOUNT_DEBUG 1 */
 
